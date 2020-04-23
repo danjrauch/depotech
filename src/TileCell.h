@@ -6,11 +6,13 @@
 class TileCell : public Cell
 {
 private:
-    Direction _dir;
-public:
-    TileCell(Direction dir);
 
-    Direction get_dir();
+public:
+    TileCell();
+
+    bool in_action();
+    bool out_action();
+    bool idle_action();
 };
 
 #endif

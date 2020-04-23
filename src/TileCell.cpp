@@ -4,16 +4,20 @@
     Constructors
 */
 
-TileCell::TileCell(Direction dir) : Cell(CellTypes::Tile)
-{
-    _dir = dir;
-}
+TileCell::TileCell() : Cell(CellLabels::Tile){}
 
 /*
     Member Functions
 */
 
-Direction TileCell::get_dir()
-{
-    return _dir;
+bool TileCell::in_action(){
+    return true;
+}
+
+bool TileCell::out_action(){
+    return true;
+}
+
+bool TileCell::idle_action(){
+    return true;
 }

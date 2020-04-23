@@ -9,6 +9,10 @@ private:
 
 public:
     DeliveryCell();
+
+    bool in_action();
+    bool out_action();
+    bool idle_action();
 };
 
 #endif

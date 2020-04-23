@@ -1,24 +1,17 @@
 #include "Cell.h"
 
-/*
-    Constructors
-*/
-
-Cell::Cell(CellTypes type)
+void Cell::add_dir(std::pair<int, int> to_pos)
 {
-    _type = type;
+    if(std::count(_dirs.begin(), _dirs.end(), to_pos) == 0)
+        _dirs.push_back(to_pos);
 }
 
-/*
-    Member Functions
-*/
-
-int Cell::get_occupied()
+std::vector<std::pair<int, int>> Cell::get_dirs()
 {
-    return _occupied;
+    return _dirs;
 }
 
-CellTypes Cell::get_type()
+CellLabels Cell::get_label()
 {
-    return _type;
+    return _label;
 }
